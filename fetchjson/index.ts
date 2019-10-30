@@ -1,5 +1,17 @@
 import axios from 'axios';
 
-const url = 'https://jsonplaceholder.typicode.com/todos';
+const url: string = 'https://jsonplaceholder.typicode.com/todos/1';
 
-axios.get(url).then(res => console.log(res.data));
+axios.get(url).then(res => {
+  const todo = res.data;
+
+  const ID = todo.Id;
+  const title = todo.Title;
+  const finished = todo.finished;
+
+  console.log(`
+    todo with ${ID}
+    title ${title}
+    finished ${finished}
+  `);
+});
