@@ -20,11 +20,11 @@ export class CustomMap {
     });
 
     marker.addListener('click', () => {
-      const infoWindow = new google.maps.InfoWindow({
+      const infowindow = new google.maps.InfoWindow({
         content: mappable.markerContent()
       });
 
-      infoWindow.open(this.googleMap, infoWindow);
+      infowindow.open(this.googleMap, marker);
     });
   }
 }
