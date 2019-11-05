@@ -18,6 +18,6 @@ export class User implements Mappable {
   }
 
   markerContent(): string {
-    return `<h1>User Name is ${this.name}</h1>`;
+    return `User Name: ${this.name}`;
   }
 }
