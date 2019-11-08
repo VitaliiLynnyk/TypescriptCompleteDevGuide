@@ -1,3 +1,8 @@
 import { Sorter } from './Sorter';
+import { NumbersCollections } from './NumbersCollections';
+import { CharactersCollection } from './CharactersCollection';
 
-const sorter = new Sorter([8, 1, 5, 3, 4]);
+const numbersCollection = new CharactersCollection('trolololsabfdcbb');
+const sorter = new Sorter(numbersCollection);
+sorter.sort();
+console.log(sorter);
