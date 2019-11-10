@@ -12,4 +12,5 @@ linkedList.add(-3);
 linkedList.add(4);
 
 linkedList.sort();
-console.log(linkedList.print);
+
+console.log(new NumbersCollections([-2, 10, -1, 5]).sort());
