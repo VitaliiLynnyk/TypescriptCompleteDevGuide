@@ -1,5 +1,5 @@
-import { LinkedList } from './LinkedList';
 import { Sorter } from './Sorter';
+import { LinkedList } from './LinkedList';
 import { NumbersCollections } from './NumbersCollections';
 import { CharactersCollection } from './CharactersCollection';
 
@@ -11,7 +11,5 @@ linkedList.add(8);
 linkedList.add(-3);
 linkedList.add(4);
 
-const numbersCollection = new CharactersCollection('trolololsabfdcbb');
-const sorter = new Sorter(linkedList);
-sorter.sort();
+linkedList.sort();
 console.log(linkedList.print);
