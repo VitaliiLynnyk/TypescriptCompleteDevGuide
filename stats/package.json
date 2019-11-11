@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^12.12.7",
     "concurrently": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.7"
   }
 }
