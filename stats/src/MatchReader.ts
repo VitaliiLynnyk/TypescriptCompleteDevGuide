@@ -1,4 +1,5 @@
 import { MatchData } from './MatchData';
+import { MatchResult } from './Enums';
 import { dateStringToDate } from './utils';
 
 interface DataReader {
