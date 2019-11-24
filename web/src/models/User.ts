@@ -37,4 +37,16 @@ export class User {
     this.attributes.set(update);
     this.events.trigger('change');
   }
+
+  fetch(): void {
+    const id = this.get('id');
+
+    if (typeof id !== 'number') {
+      throw new Error('Cant fetch');
+    }
+
+    this.sync.fetch(id).then((res: AxiosResponse): void => {
+      this.attributes.set(res.data);
+    });
+  }
 }
