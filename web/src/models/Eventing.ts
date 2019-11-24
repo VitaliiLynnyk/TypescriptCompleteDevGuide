@@ -1,7 +1,7 @@
 import { Callback, Events } from '../types';
 
 export class Eventing {
-  events: Events;
+  events: Events = {};
 
   on(eventName: string, callback: Callback): void {
     const handlers = this.events[eventName] || [];
