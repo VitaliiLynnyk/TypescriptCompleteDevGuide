@@ -23,6 +23,8 @@ export class Collection {
         const user = User.buildUser(value);
         this.models.push(user);
       });
+
+      this.trigger('change');
     });
   }
 }
