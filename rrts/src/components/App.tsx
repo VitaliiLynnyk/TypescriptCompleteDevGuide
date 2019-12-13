@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Todo, fetchTodos } from '../actions';
+
 import { StoreState } from '../reducers';
+import { Todo, fetchTodos } from '../actions';
 
 interface AppProps {
   todos: Todo[];
@@ -9,8 +10,23 @@ interface AppProps {
 }
 
 class _App extends React.Component<AppProps> {
+  onBtnClick = (): void => {
+    this.props.fetchTodos();
+  };
+
+  renderList(): JSX.Element[] {
+    return this.props.todos.map((todo: Todo) => {
+      return <div key={todo.id}>{todo.title}</div>;
+    });
+  }
+
   render() {
-    return <div> Appp </div>;
+    return (
+      <div>
+        <button onClick={this.onBtnClick}>Fetch</button>
+        {this.renderList()}
+      </div>
+    );
   }
 }
 
