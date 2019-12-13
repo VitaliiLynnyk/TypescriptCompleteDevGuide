@@ -7,7 +7,7 @@ import { ActionTypes } from './types';
 export interface Todo {
   id: number;
   title: string;
-  complated: boolean;
+  completed: boolean;
 }
 
 export interface FetchTodosAction {
@@ -24,11 +24,11 @@ const url = 'https://jsonplaceholder.typicode.com/todos';
 
 export const fetchTodos = () => {
   return async (dispatch: Dispatch) => {
-    const res = await axios.get<Todo[]>(url);
+    const response = await axios.get<Todo[]>(url);
 
     dispatch<FetchTodosAction>({
       type: ActionTypes.fetchTodos,
-      payload: res.data
+      payload: response.data
     });
   };
 };
